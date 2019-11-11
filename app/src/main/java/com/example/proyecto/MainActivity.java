@@ -40,20 +40,19 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, RegistroAlabanzas.class);
             MainActivity.this.startActivity(intent);
 
-        } else if (id == R.id.item_Alabanzas) {
-            Toast.makeText(this, "Aquí consultaremos Alabanzas", Toast.LENGTH_SHORT).show();
-            return true;
-        }else if (id == R.id.item_Coros) {
-            Toast.makeText(this, "Aquí consultaremos Coros", Toast.LENGTH_SHORT).show();
-            return true;
-        //noinspection SimplifiableIfStatement
-
-      }else if (id == R.id.item_Rcoros) {
+        }else if (id == R.id.item_Rcoros) {
             Intent intent = new Intent(MainActivity.this, RegistrarCoros.class);
             MainActivity.this.startActivity(intent);
             //noinspection SimplifiableIfStatement
 
-        }
+        } else if (id == R.id.item_Alabanzas) {
+            Intent intent = new Intent(MainActivity.this, ListarAlabanzas.class);
+            MainActivity.this.startActivity(intent);
+        }else if (id == R.id.item_Coros) {
+            Intent intent = new Intent(MainActivity.this, ListarCoros.class);
+            MainActivity.this.startActivity(intent);
+
+      }
         return super.onOptionsItemSelected(item);
     }
 }
