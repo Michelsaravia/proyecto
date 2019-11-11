@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.item_Registrar) {
-            Toast.makeText(this, "Aquí registraremos", Toast.LENGTH_SHORT).show();
-            return true;
+            Intent intent = new Intent(MainActivity.this, RegistroAlabanzas.class);
+            MainActivity.this.startActivity(intent);
 
         } else if (id == R.id.item_Alabanzas) {
             Toast.makeText(this, "Aquí consultaremos Alabanzas", Toast.LENGTH_SHORT).show();
@@ -48,7 +48,12 @@ public class MainActivity extends AppCompatActivity {
             return true;
         //noinspection SimplifiableIfStatement
 
-      }
+      }else if (id == R.id.item_Rcoros) {
+            Intent intent = new Intent(MainActivity.this, RegistrarCoros.class);
+            MainActivity.this.startActivity(intent);
+            //noinspection SimplifiableIfStatement
+
+        }
         return super.onOptionsItemSelected(item);
     }
 }

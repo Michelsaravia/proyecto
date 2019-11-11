@@ -5,7 +5,11 @@
     <item
         android:id="@+id/item_Registrar"
         android:orderInCategory="2"
-        android:title="Registrar" />
+        android:title="Registrar Alabanzas" />
+    <item
+        android:id="@+id/item_Rcoros"
+        android:orderInCategory="2"
+        android:title="Registrar Coros" />
     <item
         android:id="@+id/item_Alabanzas"
         android:orderInCategory="3"
