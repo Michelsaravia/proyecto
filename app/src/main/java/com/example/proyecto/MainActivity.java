@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -35,26 +36,25 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.item_Registrar) {
-            Intent intent = new Intent(MainActivity.this, RegistroAlabanzas.class);
-            MainActivity.this.startActivity(intent);
-
-        }else if (id == R.id.item_Rcoros) {
-            Intent intent = new Intent(MainActivity.this, RegistrarCoros.class);
-            MainActivity.this.startActivity(intent);
-            //noinspection SimplifiableIfStatement
-
-        } else if (id == R.id.item_Alabanzas) {
+        if (id == R.id.item_Alabanzas) {
             Intent intent = new Intent(MainActivity.this, ListarAlabanzas.class);
             MainActivity.this.startActivity(intent);
         }else if (id == R.id.item_Coros) {
             Intent intent = new Intent(MainActivity.this, ListarCoros.class);
             MainActivity.this.startActivity(intent);
-
       }
+
         return super.onOptionsItemSelected(item);
     }
-}
 
+    public void rA(View view) {
+        Intent intent = new Intent(MainActivity.this, RegistroAlabanzas.class);
+        MainActivity.this.startActivity(intent);
+    }
+
+    public void rC(View view) {
+        Intent intent = new Intent(MainActivity.this, RegistrarCoros.class);
+        MainActivity.this.startActivity(intent);
+    }
+}
 
