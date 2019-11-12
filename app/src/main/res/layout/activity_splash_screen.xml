@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreen"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="ITCA-FEPADE"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#000"
+        />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Desarrolladoras:"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#000"
+        />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Glenda Elizabeth Chanta Mejían \n\n Tania Michel Saravia Alfaro"
+        android:textAlignment="center"
+        android:fontFamily="casual"
+        android:textColor="#000"
+        />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Facilitador:"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#000"
+        />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Manuel de Jesús Gámez López"
+        android:textAlignment="center"
+        android:fontFamily="casual"
+        android:textColor="#000"
+        />
+
+</LinearLayout>
