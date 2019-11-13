@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20dp"
-        android:text="Glenda Elizabeth Chanta Mejían \n\n Tania Michel Saravia Alfaro"
+        android:text="Glenda Elizabeth Chanta Mejía \n\n Tania Michel Saravia Alfaro"
         android:textAlignment="center"
         android:fontFamily="casual"
         android:textColor="#000"
