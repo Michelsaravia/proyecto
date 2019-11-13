@@ -41,6 +41,19 @@
         android:hint="Letra"
         android:textSize="20dp"
         android:textAlignment="gravity"
+        android:background="#E4E2E2"
+        />
+
+    <Button
+        android:id="@+id/btn_reg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrar"
+        android:textSize="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#FCF0F0"
         />
 
 </LinearLayout>
