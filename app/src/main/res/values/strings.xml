@@ -3,4 +3,6 @@
     <string name="item_Registrar">Registrar</string>
     <string name="item_Alabanzas">Alabanzas</string>
     <string name="item_Coros">Coros</string>
+
+    <string name="URL_ALABANZA">http://192.168.43.29/listar.php</string>
 </resources>

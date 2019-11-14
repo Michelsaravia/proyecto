@@ -7,41 +7,5 @@
     tools:context=".ListarAlabanzas"
     android:orientation="vertical">
 
-    <LinearLayout android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:background="#FFFFFF"
-        android:orientation="vertical">
-
-        <TextView android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="LISTADO DE ALABANZAS"
-            android:fontFamily="serif-monospace"
-            android:textAlignment="center"
-            android:textSize="16dp"
-            android:textStyle="italic"
-            android:textColor="#000"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
-
-        <SearchView android:id="@+id/searchView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#FFFFFF"
-            android:queryHint="Buscar"
-            android:iconifiedByDefault="false" />
-
-        <Space android:layout_width="match_parent"
-            android:layout_height="3dp"/>
-    </LinearLayout>
-    <ListView
-        android:id="@+id/listViewPersonas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:background="#FFFFFF"
-        android:layout_marginBottom="35dp" />
 
 </RelativeLayout>
