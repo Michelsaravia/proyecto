@@ -6,8 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+
+import cz.msebera.android.httpclient.Header;
 
 public class AlabanzasActivity extends AppCompatActivity {
     private EditText ettitulo, etautor, etletra;
@@ -55,4 +59,26 @@ public class AlabanzasActivity extends AppCompatActivity {
             }
         });
     }
+
+    private  void agregarAlabanza(Alabanzas a){
+        String url = "https://proyectofinalsis21.000webhostapp.com/agregar.php?";
+        String parametros = "titulo="+a.getTitulo()+"&autor="+a.getAutor()+"&letra="+a.getLetra();
+        cliente.post(url + parametros, new AsyncHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                if (statusCode == 200){
+                    Toast.makeText(AlabanzasActivity.this, "Alabanza agregada correctamente", Toast.LENGTH_SHORT).show();
+                    ettitulo.setText("");
+                    etautor.setText("");
+                    etletra.setText("");
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+
+            }
+        });
+    }
+
 }
