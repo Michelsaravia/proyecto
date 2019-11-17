@@ -6,4 +6,6 @@ public class Coros {
     private String autor;
     private String letra;
 
+    public Coros() {
+    }
 }
