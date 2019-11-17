@@ -43,5 +43,9 @@ public class registro_coros extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_coros);
+
+        lvdatosc = findViewById(R.id.lvDatosRc);
+
+        clientec = new AsyncHttpClient();
     }
 }
