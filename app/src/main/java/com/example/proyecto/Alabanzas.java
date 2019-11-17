@@ -53,4 +53,11 @@ public class Alabanzas {
         return id +  " ~ "
                 + titulo;
     }
+
+    public  String tostring(){
+        return  "ID: " + id + "\n"+
+                "TÍTULO: " + titulo + "\n"+
+                "AUTOR: " + autor + "\n\n"+
+                "LETRA: " +  "\n" + letra ;
+    }
 }
