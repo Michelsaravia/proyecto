@@ -14,5 +14,9 @@ public class registro_alabanzas extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_alabanzas);
+
+        lvdatos = findViewById(R.id.lvDatosRa);
+
+        cliente = new AsyncHttpClient();
     }
 }
