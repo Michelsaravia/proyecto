@@ -9,6 +9,9 @@ import android.view.KeyEvent;
 import android.widget.ListView;
 
 import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+
+import cz.msebera.android.httpclient.Header;
 
 public class registro_coros extends AppCompatActivity {
     private AsyncHttpClient clientec = new AsyncHttpClient();
@@ -47,5 +50,22 @@ public class registro_coros extends AppCompatActivity {
         lvdatosc = findViewById(R.id.lvDatosRc);
 
         clientec = new AsyncHttpClient();
+    }
+
+    private void obtenerAlabanzas(){
+        String url = "https://proyectofinalsis21.000webhostapp.com/obtenerDatosCoro.php";
+        clientec.post(url, new AsyncHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                if (statusCode == 200){
+                    //listarAlabanzas(new String(responseBody));
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+
+            }
+        });
     }
 }
