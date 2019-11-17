@@ -62,7 +62,14 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/etestilo"/>
 
-
+        <Button
+            android:id="@+id/btnRegistrarA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registrar"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/btn_estilo"
+            />
 
     </LinearLayout>
     </ScrollView>
