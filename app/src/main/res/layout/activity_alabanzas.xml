@@ -53,6 +53,16 @@
             android:inputType="text"
             android:background="@drawable/etestilo"/>
 
+        <EditText
+            android:id="@+id/etletra"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:textAlignment="center"
+            android:hint="Letra"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/etestilo"/>
+
+
 
     </LinearLayout>
     </ScrollView>
