@@ -8,4 +8,14 @@
     android:orientation="vertical"
     android:layout_margin="25dp">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registro de Coros"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        />
+
 </LinearLayout>
