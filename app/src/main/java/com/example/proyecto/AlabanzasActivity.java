@@ -30,6 +30,8 @@ public class AlabanzasActivity extends AppCompatActivity {
 
         cliente = new AsyncHttpClient();
 
+        almacenarAlabanzas();
+
     }
 
     private void almacenarAlabanzas() {
@@ -48,7 +50,7 @@ public class AlabanzasActivity extends AppCompatActivity {
                     a.setAutor(etautor.getText().toString().replaceAll(" ", "%20"));
                     a.setLetra(etletra.getText().toString().replaceAll(" ", "%20"));
 
-                    //agregarAlabanza(a);
+                    agregarAlabanza(a);
                     // try {
                         //    Thread.sleep(1000);
                         //} catch (InterruptedException e) {
