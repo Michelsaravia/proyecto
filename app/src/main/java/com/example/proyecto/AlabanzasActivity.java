@@ -23,5 +23,7 @@ public class AlabanzasActivity extends AppCompatActivity {
 
         btnRegistrar = findViewById(R.id.btnRegistrarA);
 
+        cliente = new AsyncHttpClient();
+
     }
 }
