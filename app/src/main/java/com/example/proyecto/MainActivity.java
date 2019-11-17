@@ -67,24 +67,24 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.item_Alabanzas) {
-            Intent intent = new Intent(MainActivity.this, ListarAlabanzas.class);
-            MainActivity.this.startActivity(intent);
+           // Intent intent = new Intent(MainActivity.this, ListarAlabanzas.class);
+            //MainActivity.this.startActivity(intent);
         }else if (id == R.id.item_Coros) {
-            Intent intent = new Intent(MainActivity.this, ListarCoros.class);
-            MainActivity.this.startActivity(intent);
+           // Intent intent = new Intent(MainActivity.this, ListarCoros.class);
+           // MainActivity.this.startActivity(intent);
       }
 
         return super.onOptionsItemSelected(item);
     }
 
     public void rA(View view) {
-        Intent intent = new Intent(MainActivity.this, RegistroAlabanzas.class);
-        MainActivity.this.startActivity(intent);
+        //Intent intent = new Intent(MainActivity.this, RegistroAlabanzas.class);
+        //MainActivity.this.startActivity(intent);
     }
 
     public void rC(View view) {
-        Intent intent = new Intent(MainActivity.this, RegistrarCoros.class);
-        MainActivity.this.startActivity(intent);
+       // Intent intent = new Intent(MainActivity.this, RegistrarCoros.class);
+        //MainActivity.this.startActivity(intent);
     }
 
     private void DialogConfirmacion(){

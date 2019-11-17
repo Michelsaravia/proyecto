@@ -16,10 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ListarAlabanzas" />
-        <activity android:name=".ListarCoros" />
-        <activity android:name=".RegistrarCoros" />
-        <activity android:name=".RegistroAlabanzas" />
         <activity android:name=".MainActivity">
 
         </activity>
