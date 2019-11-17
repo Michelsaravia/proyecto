@@ -6,10 +6,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
+
+import com.loopj.android.http.AsyncHttpClient;
 
 public class CorosActivity extends AppCompatActivity {
 
-
+    private EditText ettitulo, etautor, etletra;
+    private Button btnRegistrar;
+    private AsyncHttpClient cliente = new AsyncHttpClient();
+    private ListView lvdatos;
 
     AlertDialog.Builder dialogo;
 
