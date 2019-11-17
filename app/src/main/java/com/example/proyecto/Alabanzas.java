@@ -5,4 +5,7 @@ public class Alabanzas {
     private String titulo;
     private String autor;
     private String letra;
+
+    public Alabanzas() {
+    }
 }
