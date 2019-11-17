@@ -6,10 +6,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
+
+import org.json.JSONArray;
+
+import java.util.ArrayList;
 
 import cz.msebera.android.httpclient.Header;
 
@@ -50,15 +58,17 @@ public class registro_coros extends AppCompatActivity {
         lvdatosc = findViewById(R.id.lvDatosRc);
 
         clientec = new AsyncHttpClient();
+
+        obtenerCoros();
     }
 
-    private void obtenerAlabanzas(){
+    private void obtenerCoros(){
         String url = "https://proyectofinalsis21.000webhostapp.com/obtenerDatosCoro.php";
         clientec.post(url, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                 if (statusCode == 200){
-                    //listarAlabanzas(new String(responseBody));
+                    listarCoros(new String(responseBody));
                 }
             }
 
@@ -67,5 +77,32 @@ public class registro_coros extends AppCompatActivity {
 
             }
         });
+    }
+
+
+    private  void listarCoros(String respuesta){
+        final ArrayList<Coros> lista = new ArrayList<Coros>();
+        try{
+            JSONArray jsonArreglo = new JSONArray(respuesta);
+            for (int i=0; i<jsonArreglo.length(); i++){
+                Coros a = new Coros();
+                a.setId(jsonArreglo.getJSONObject(i).getInt("id_c"));
+                a.setTitulo(jsonArreglo.getJSONObject(i).getString("titulo"));
+                a.setAutor(jsonArreglo.getJSONObject(i).getString("autor"));
+                a.setLetra(jsonArreglo.getJSONObject(i).getString("letra"));
+
+                lista.add(a);
+
+            }
+
+            ArrayAdapter<Coros> a = new ArrayAdapter(this, R.layout.support_simple_spinner_dropdown_item, lista);
+            lvdatosc.setAdapter(a);
+
+
+        }catch(Exception el){
+            el.printStackTrace();
+        }
+
+
     }
 }
