@@ -19,10 +19,10 @@ import cz.msebera.android.httpclient.Header;
 
 public class CorosActivity extends AppCompatActivity {
 
-    private EditText ettitulo, etautor, etletra;
-    private Button btnRegistrar;
-    private AsyncHttpClient cliente = new AsyncHttpClient();
-    private ListView lvdatos;
+    private EditText ettituloc, etautorc, etletrac;
+    private Button btnRegistrarc;
+    private AsyncHttpClient clientec = new AsyncHttpClient();
+    private ListView lvdatosc;
 
     AlertDialog.Builder dialogo;
 
@@ -53,35 +53,37 @@ public class CorosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coros);
 
-        ettitulo = findViewById(R.id.ettitulo);
-        etautor = findViewById(R.id.etautor);
-        etletra = findViewById(R.id.etletra);
+        ettituloc = findViewById(R.id.ettituloc);
+        etautorc = findViewById(R.id.etautorc);
+        etletrac = findViewById(R.id.etletrac);
 
-        btnRegistrar = findViewById(R.id.btnRegistrarC);
+        btnRegistrarc = findViewById(R.id.btnRegistrarC);
 
-        lvdatos = findViewById(R.id.lvDatosRa);
+        lvdatosc = findViewById(R.id.lvDatosRc);
 
-        cliente = new AsyncHttpClient();
+        clientec = new AsyncHttpClient();
+
+        almacenarCoros();
     }
 
 
     private void almacenarCoros() {
-        btnRegistrar.setOnClickListener(new View.OnClickListener() {
+        btnRegistrarc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (ettitulo.getText().toString().length()== 0 )  {
-                    ettitulo.setError("Campo Obligatorio");
-                }else if (etautor.getText().toString().length()== 0){
-                    etautor.setError("Campo Obligatorio");
-                }else  if (etletra.getText().toString().length()== 0){
-                    etletra.setError("Campo Obligatorio");
+                if (ettituloc.getText().toString().length()== 0 )  {
+                    ettituloc.setError("Campo Obligatorio");
+                }else if (etautorc.getText().toString().length()== 0){
+                    etautorc.setError("Campo Obligatorio");
+                }else  if (etletrac.getText().toString().length()== 0){
+                    etletrac.setError("Campo Obligatorio");
                 }else{
-                    Alabanzas a = new Alabanzas();
-                    a.setTitulo(ettitulo.getText().toString().replaceAll(" ", "%20"));
-                    a.setAutor(etautor.getText().toString().replaceAll(" ", "%20"));
-                    a.setLetra(etletra.getText().toString().replaceAll(" ", "%20"));
+                    Coros a = new Coros();
+                    a.setTitulo(ettituloc.getText().toString().replaceAll(" ", "%20"));
+                    a.setAutor(etautorc.getText().toString().replaceAll(" ", "%20"));
+                    a.setLetra(etletrac.getText().toString().replaceAll(" ", "%20"));
 
-                    //agregarAlabanza(a);
+                    agregarCoros(a);
 
                     //obtenerAlabanzas();
                 }
@@ -93,14 +95,16 @@ public class CorosActivity extends AppCompatActivity {
     private  void agregarCoros(Coros a){
         String url = "https://proyectofinalsis21.000webhostapp.com/agregarcoro.php?";
         String parametros = "titulo="+a.getTitulo()+"&autor="+a.getAutor()+"&letra="+a.getLetra();
-        cliente.post(url + parametros, new AsyncHttpResponseHandler() {
+        clientec.post(url + parametros, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                 if (statusCode == 200){
-                    Toast.makeText(CorosActivity.this, "Alabanza agregada correctamente", Toast.LENGTH_SHORT).show();
-                    ettitulo.setText("");
-                    etautor.setText("");
-                    etletra.setText("");
+                    Toast.makeText(CorosActivity.this, "Coro agregado correctamente", Toast.LENGTH_SHORT).show();
+                    ettituloc.setText("");
+                    etautorc.setText("");
+                    etletrac.setText("");
+                }else if (statusCode != 200){
+                    Toast.makeText(CorosActivity.this, "Coro no se pudo agregar", Toast.LENGTH_SHORT).show();
                 }
             }
 
