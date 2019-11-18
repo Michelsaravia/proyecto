@@ -8,6 +8,14 @@
     android:orientation="vertical"
     android:layout_margin="15dp">
 
+    <EditText
+        android:id="@+id/buscarc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:hint="Buscar"
+        android:background="@drawable/etestilo"/>
+
     <ListView
         android:id="@+id/lvDatosRc"
         android:layout_width="match_parent"

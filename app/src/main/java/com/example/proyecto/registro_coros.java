@@ -5,10 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -26,7 +29,7 @@ public class registro_coros extends AppCompatActivity {
     private ListView lvdatosc;
 
     AlertDialog.Builder dialogo;
-
+    EditText buscar;
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -56,8 +59,9 @@ public class registro_coros extends AppCompatActivity {
         setContentView(R.layout.activity_registro_coros);
 
         lvdatosc = findViewById(R.id.lvDatosRc);
-
+        buscar = findViewById(R.id.buscarc);
         clientec = new AsyncHttpClient();
+
 
         obtenerCoros();
     }
@@ -95,9 +99,26 @@ public class registro_coros extends AppCompatActivity {
 
             }
 
-            ArrayAdapter<Coros> a = new ArrayAdapter(this, R.layout.support_simple_spinner_dropdown_item, lista);
+            final ArrayAdapter<Coros> a = new ArrayAdapter(this, R.layout.support_simple_spinner_dropdown_item, lista);
             lvdatosc.setAdapter(a);
 
+
+            buscar.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    a.getFilter().filter(s);
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+
+                }
+            });
 
             lvdatosc.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
                 @Override
