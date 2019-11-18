@@ -142,7 +142,7 @@ public class registro_alabanzas extends AppCompatActivity {
 
                     AlertDialog.Builder al = new AlertDialog.Builder(registro_alabanzas.this);
                     al.setCancelable(true);
-                    al.setTitle("Detalle");
+                    al.setTitle("Descripción Alabanza");
                     al.setMessage(a.tostring());
                     al.show();
                 }
