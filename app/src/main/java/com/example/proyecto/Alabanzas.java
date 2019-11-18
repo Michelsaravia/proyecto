@@ -55,8 +55,7 @@ public class Alabanzas {
     }
 
     public  String tostring(){
-        return  "ID: " + id + "\n"+
-                "TÍTULO: " + titulo + "\n"+
+        return "TÍTULO: " + titulo + "\n"+
                 "AUTOR: " + autor + "\n\n"+
                 "LETRA: " +  "\n" + letra ;
     }
