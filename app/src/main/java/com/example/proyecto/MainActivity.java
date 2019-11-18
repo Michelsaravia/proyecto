@@ -70,8 +70,8 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, registro_alabanzas.class);
             MainActivity.this.startActivity(intent);
         }else if (id == R.id.item_Coros) {
-           // Intent intent = new Intent(MainActivity.this, ListarCoros.class);
-           // MainActivity.this.startActivity(intent);
+            Intent intent = new Intent(MainActivity.this, registro_coros.class);
+           MainActivity.this.startActivity(intent);
       }
 
         return super.onOptionsItemSelected(item);
