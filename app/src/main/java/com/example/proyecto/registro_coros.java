@@ -154,12 +154,7 @@ public class registro_coros extends AppCompatActivity {
             lvdatosc.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Coros a = lista.get(position);
-                    StringBuffer b = new StringBuffer();
-                    b.append("ID: " + a.getId() + "\n");
-                    b.append("TITULO: " + a.getTitulo() + "\n");
-                    b.append("AUTOR: " + a.getTitulo() + "\n");
-                    b.append("LETRA: " + a.getLetra() + "\n");
+                    Coros a = (Coros) parent.getItemAtPosition(position);
 
                     AlertDialog.Builder al = new AlertDialog.Builder(registro_coros.this);
                     al.setCancelable(true);
@@ -173,7 +168,5 @@ public class registro_coros extends AppCompatActivity {
         }catch(Exception el){
             el.printStackTrace();
         }
-
-
     }
 }

@@ -155,16 +155,10 @@ public class registro_alabanzas extends AppCompatActivity {
                 }
             });
 
-
             lvdatos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Alabanzas a = lista.get(position);
-                    StringBuffer b = new StringBuffer();
-                    b.append("ID: " + a.getId() + "\n");
-                    b.append("TITULO: " + a.getTitulo() + "\n");
-                    b.append("AUTOR: " + a.getTitulo() + "\n");
-                    b.append("LETRA: " + a.getLetra() + "\n");
+                    Alabanzas a = (Alabanzas) parent.getItemAtPosition(position);
 
                     AlertDialog.Builder al = new AlertDialog.Builder(registro_alabanzas.this);
                     al.setCancelable(true);
